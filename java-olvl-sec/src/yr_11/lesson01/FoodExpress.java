@@ -6,9 +6,11 @@ public class FoodExpress {
 
     public static double cartTotal = 0.00;
 
+    /**
+     * We are using a technique called parrallel arrays to organise our food menu
+     */
     public static double[] prices = {6.00, 6.00, 4.00, 12.00, 12.00, 3.95};
-
-    // Declaring an **array** that will store our menu items of type String
+    
     public static String[] kioskMenu = {"Fish and Chips", "Hot Dog and Chips", "Ftira", "Salad Tuna", "Salad Chicken", "Soft Drink"};
     
     public static int[] foodCodes = {1, 2, 3, 4, 5, 6};

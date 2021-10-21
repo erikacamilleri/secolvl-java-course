@@ -4,14 +4,20 @@ import java.util.Scanner;
 
 public class FoodExpress {
 
+    public static double cartTotal = 0.00;
+
+    public static double[] prices = {6.00, 6.00, 4.00, 12.00, 12.00, 3.95};
+
+    // Declaring an **array** that will store our menu items of type String
+    public static String[] kioskMenu = {"Fish and Chips", "Hot Dog and Chips", "Ftira", "Salad Tuna", "Salad Chicken", "Soft Drink"};
+    
+    public static int[] foodCodes = {1, 2, 3, 4, 5, 6};
+    
     /**
      * A method to display a simple food menu like you would see
      * in a kiosk.
      */
     public static void displayMenu() {
-        // Declaring an **array** that will store our menu items of type String
-        String[] kioskMenu = {"Fish and Chips", "Hot Dog and Chips", "Ftira", "Salad Tuna", "Salad Chicken", "Soft Drink"};
-
         // Display them using a for loop
         for(int i = 0; i < 6; i++) {
             // Display (using + as an operator to join text)
@@ -19,24 +25,37 @@ public class FoodExpress {
         }
     }
 
+    public static void addFoodItemToCart(int foodCode) {
+        // E.g. 1
+        // Searching for the food code
+        for(int i = 0; i < 6; i++) {
+            if (foodCodes[i] == foodCode) {
+                // We add the food item to cart
+                FoodExpress.cartTotal = FoodExpress.cartTotal + prices[i];
+            }
+        }
+
+        System.out.println("The cart got updated: $" + FoodExpress.cartTotal);
+    }
+
     /**
      * A method that should accept input from the user to display the order
      */
-    public static void placeOrder() {
+    public static int placeOrder() {
         // Prompt the user to place the order
         System.out.println("Kindly type in your order...");
 
         // Let's declare a variable to store what the customer wants
-        String order = "";
+        int foodCode;
 
         // Accepting input
         Scanner acceptInput = new Scanner(System.in);  
-        order = acceptInput.nextLine();
-
-        // Check that this works
-        System.out.println(order);
+        foodCode = acceptInput.nextInt();
 
         // Closing input
         acceptInput.close();
+
+        // return what the user ordered
+        return foodCode;
     }
 }

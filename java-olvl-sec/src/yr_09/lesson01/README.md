@@ -34,6 +34,8 @@ System.out.println("Hello, world!");
 * Must declare just one main method as indicated above.
 * Every statement we write in java must end with a semi-colon `;` .
 * Text meant to be outputted is surrounded by double quotes `" "`.
+* File names should start with a capital letter, no spaces and no special characters. Instead of separating words with spaces, each word starts with a capital letter.
+
 
 ## FAQ
 

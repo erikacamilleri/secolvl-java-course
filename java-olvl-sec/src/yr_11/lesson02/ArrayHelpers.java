@@ -57,11 +57,17 @@ public class ArrayHelpers {
         int endOfList = size - 1;
 
         do {
-            int nextRandomIndex = randomiser.nextInt(size);
-            int strikeOutIndex = linearSearch(k, nextRandomIndex);
+            int nextRandomIndex = 0;
+            int strikeOutIndex = 0;
+            do {
+                nextRandomIndex = randomiser.nextInt(size);
+                strikeOutIndex = linearSearch(k, nextRandomIndex);
+            } while ((strikeOutIndex != -1) && !(isAllSameValues(k, -1)));
+            
             k[strikeOutIndex] = -1;
             shuffled[endOfList] = elements[strikeOutIndex];
-        } while (false);
+            endOfList = endOfList - 1;
+        } while (!isAllSameValues(k, -1));
 
         return shuffled;
     }

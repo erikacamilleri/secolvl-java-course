@@ -39,36 +39,34 @@ public class ArrayHelpers {
     }
 
     public static int[] shuffle(int[] elements) {
-        // TODO Fisher Yates Shuffle
-        // Write down the numbers from 1 through N.
-        // Pick a random number k between one and the number of unstruck numbers remaining (inclusive).
-        // Counting from the low end, strike out the kth number not yet struck out, and write it down at the end of a separate list.
-        // Repeat from step 2 until all the numbers have been struck out.
-        // The sequence of numbers written down in step 3 is now a random permutation of the original numbers.
+        // Declare a new array to store our shuffled numbers
         int size = elements.length;
         int[] shuffled = new int[size];
         
+        // Write down the numbers from 1 through N.
         int[] k = new int[size];
-
         for(int i = 0; i < size; i ++) {
             k[i] = i;
         }
+
         Random randomiser = new Random();
         int endOfList = size - 1;
-
         do {
-            int nextRandomIndex = 0;
-            int strikeOutIndex = 0;
-            do {
-                nextRandomIndex = randomiser.nextInt(size);
+            // Pick a random number k between one and the number of unstruck numbers remaining (inclusive).
+            int strikeOutIndex = -1;
+            while(strikeOutIndex == -1) {
+                int nextRandomIndex = randomiser.nextInt(size);
                 strikeOutIndex = linearSearch(k, nextRandomIndex);
-            } while ((strikeOutIndex != -1) && !(isAllSameValues(k, -1)));
-            
+                System.out.println(nextRandomIndex + " " + strikeOutIndex);
+            }
+            // Counting from the low end, strike out the kth number not yet struck out, and write it down at the end of a separate list.
             k[strikeOutIndex] = -1;
+            
             shuffled[endOfList] = elements[strikeOutIndex];
             endOfList = endOfList - 1;
-        } while (!isAllSameValues(k, -1));
+        } while (!(isAllSameValues(k, -1))); // Repeat until all k numbers are struck out
 
+        // The sequence of numbers written down in step 3 is now a random permutation of the original numbers.
         return shuffled;
     }
 

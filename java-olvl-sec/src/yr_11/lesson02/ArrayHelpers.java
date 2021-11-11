@@ -1,5 +1,7 @@
 package yr_11.lesson02;
 
+import java.util.Random;
+
 public class ArrayHelpers {
     
     public static int linearSearch(int[] elements, int target) {
@@ -32,7 +34,7 @@ public class ArrayHelpers {
                 targetPosition = current;
             }
             current = current + 1;
-        }
+        }                  
         return targetPosition;
     }
 
@@ -45,6 +47,33 @@ public class ArrayHelpers {
         // The sequence of numbers written down in step 3 is now a random permutation of the original numbers.
         int size = elements.length;
         int[] shuffled = new int[size];
+        
+        int[] k = new int[size];
+
+        for(int i = 0; i < size; i ++) {
+            k[i] = i;
+        }
+        Random randomiser = new Random();
+        int endOfList = size - 1;
+
+        do {
+            int nextRandomIndex = randomiser.nextInt(size);
+            int strikeOutIndex = linearSearch(k, nextRandomIndex);
+            k[strikeOutIndex] = -1;
+            shuffled[endOfList] = elements[strikeOutIndex];
+        } while (false);
+
         return shuffled;
+    }
+
+    public static boolean isAllSameValues(int[] elements, int value) {
+        boolean flag = false;
+        for(int i=0; i < elements.length; i++) {
+            if(value != elements[i]) {
+                // found a different element!
+                flag = true;
+            }
+        }
+        return !(flag);
     }
 }

@@ -37,15 +37,27 @@ if (/* boolean logic goes here (hello again chapter 10) */) {
 }
 ```
 
+Programming is a little bit like playing with blocks. You can also do...
+
+```
+if (/* boolean logic goes here (hello again chapter 10) */) {
+    // instruction(s) that only get invoked when true
+} else if (/* another boolean test goes here */) {
+    // instruction(s) that only get invoked when true
+} else {
+    // instruction(s) that all previous statements are false
+}
+```
+
 ## The SWITCH statement
 
-Do you find yourself doing too many IF statements nested into each other? Maybe you need a switch! Why not try it out to check whether your code looks neater?
+Do you find yourself doing too many IF statements nested into each other? Or too many IF...ELSE statements? Maybe you need a switch! A switch statement tests whether a given variable has a particular value from a possible set of values. This works very well with three or more values, for example, checking the day of the week of a particular date!
 
 ```
 switch(/* a variable to check */) {
     case valueOne : {
         // instruction(s) that only get invoked when variable has valueOne
-        break;
+        break; // use break to get out of the switch when there is a match
     }
     case valueTwo : {
         // instruction(s) that only get invoked when variable has valueTwo
@@ -60,6 +72,7 @@ switch(/* a variable to check */) {
     }
 }
 ```
+Why not try it out to check whether your code looks neater?
 
 ## Arithmetic Comparison and Boolean Logic
 
@@ -76,8 +89,61 @@ We normally want the program to make decisions based on a combination of:
 <ins>Boolean Logic</ins>
 
 - AND `&&`
-- OR `||`
+- OR `||` 
 - NOT `!`
+
+Boolean logic expressions help make our if statements shorter and easier to read. For example,
+
+```
+if (isWarm) {
+   if (isSunny) {
+       System.out.println("Is warm and sunny!")
+   }
+}
+```
+is the same as:
+
+```
+if (isWarm && isSunny) {
+    System.out.println("Is warm and sunny!")
+}
+```
+Another example:
+```
+if (isWarm) {
+    System.out.println("Wear a t-shirt!");
+} else if (isSunny) {
+    System.out.println("Wear a t-shirt!")
+}
+```
+can be written as...
+
+```
+if (isWarm || isSunny) {
+    System.out.println("Wear a t-shirt!")
+}
+```
+
+Tah-duh!
+
+One last one...
+
+```
+if (isWarm) {
+    // do nothing
+} else {
+    System.out.println("Wear a jacket!")
+}
+```
+
+Well, this looks a bit silly doesn't it? We are not doing anything interesting when isWarm is true! Might as well do...
+
+```
+if (!isWarm) {
+   System.out.println("Wear a jacket!")
+}
+```
+<iframe src="https://giphy.com/embed/3o6nUWcomi37MoVOpO" width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
 
 ## Key Takeaways
 

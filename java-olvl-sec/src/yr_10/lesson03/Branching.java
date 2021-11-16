@@ -62,4 +62,25 @@ public class Branching {
             }
         }
     }
+    /**
+     * Trying to understand whether you need your umbrella can be really confusing!
+     * Let us write a program to help us out.
+     */
+    public static void needUmbrella() {
+        
+        boolean isCloudy = false;
+        boolean isRaining = false;
+        boolean isSunny = false;
+        boolean isWindy = false;
+        boolean isGray = false;
+        boolean isWarm = false;
+
+        if (isWindy || isWarm || isSunny) {
+            System.out.println("You do not need your umbrella.");
+        } else if (isRaining || (isCloudy && isGray)) {
+            System.out.println("Yes you need your umbrella.");
+        } else {
+            System.out.println("Not enough information about the weather.");
+        }
+    }
 }

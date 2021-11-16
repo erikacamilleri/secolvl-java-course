@@ -64,7 +64,7 @@ public class Branching {
     }
     /**
      * Trying to understand whether you need your umbrella can be really confusing!
-     * Let us write a program to help us out.
+     * We are trying 
      */
     public static void needUmbrella() {
         
@@ -81,6 +81,26 @@ public class Branching {
             System.out.println("Yes you need your umbrella.");
         } else {
             System.out.println("Not enough information about the weather.");
+        }
+    }
+
+    public static void whatIsOnTheMenyToday() {
+        // Lesson on this coming soon!
+        String dayOfWeek = "Monday";
+
+        // TODO Change this to a switch statement
+        if (dayOfWeek.equals("Monday")) {
+            System.out.println("Couscous with Mushrooms");
+        } else if (dayOfWeek.equals("Tuesday")) {
+            System.out.println("Turkish Kebab Wraps");
+        } else if (dayOfWeek.equals("Wednesday")) {
+            System.out.println("Chicken Curry and Rice");
+        } else if (dayOfWeek.equals("Thursday")) {
+            System.out.println("Pizza");
+        } else if (dayOfWeek.equals("Friday")) {
+            System.out.println("Beef Sandwiches with Fries");
+        } else {
+            System.out.println("Beef Sandwiches without Fries");
         }
     }
 }

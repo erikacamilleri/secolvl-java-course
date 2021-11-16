@@ -143,8 +143,7 @@ if (!isWarm) {
    System.out.println("Wear a jacket!")
 }
 ```
-<iframe src="https://giphy.com/embed/3o6nUWcomi37MoVOpO" width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
-
+!("https://giphy.com/embed/3o6nUWcomi37MoVOpO")
 ## Key Takeaways
 
 - A program that can make choices can behave slightly differently each time it is run depending on the input.

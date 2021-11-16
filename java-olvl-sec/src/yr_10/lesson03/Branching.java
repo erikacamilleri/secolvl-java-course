@@ -84,21 +84,38 @@ public class Branching {
         }
     }
 
-    public static void whatIsOnTheMenyToday() {
+    public static void whatIsOnTheMenuToday() {
         int dayOfWeek = 1; // The number of days
-        // TODO Change this to a switch statement
-        if (dayOfWeek == 1) {
-            System.out.println("Couscous with Mushrooms Mondays");
-        } else if (dayOfWeek == 2) {
-            System.out.println("Turkish Kebab Wraps Tuesdays");
-        } else if (dayOfWeek == 3) {
-            System.out.println("Chicken Curry and Rice Wednesdays");
-        } else if (dayOfWeek == 4) {
-            System.out.println("Pizza Thursdays");
-        } else if (dayOfWeek == 5) {
-            System.out.println("Beef Burgers with Fries Fridays");
-        } else {
-            System.out.println("Chicken Curry and Rice *or* Chicken Wraps without Couscous");
+
+        switch(dayOfWeek) {
+            case 1: {
+                System.out.println("Couscous with Mushrooms Mondays");
+                break;
+            }
+            case 2: {
+                System.out.println("Turkish Kebab Wraps Tuesdays");
+                break;
+            }
+            case 3: {
+                System.out.println("Chicken Curry and Rice Wednesdays");
+                break;
+            }
+            case 4: {
+                System.out.println("Pizza Thursdays");
+                break;
+            }
+            case 5: {
+                System.out.println("Beef Burgers with Fries Fridays");
+                break;
+            }
+            default: {
+                System.out.println("Chicken Curry and Rice *or* Chicken Wraps without Couscous");
+            }
         }
+    }
+
+    public static void learnTheAlphabet() {
+        char letter = 'T';
+        // TODO your switch case here
     }
 }

@@ -83,7 +83,7 @@ public class Branching {
             System.out.println("Not enough information about the weather.");
         }
     }
-    
+
     public static void whatIsOnTheMenyToday() {
         int dayOfWeek = 1; // The number of days
         // TODO Change this to a switch statement
@@ -96,9 +96,9 @@ public class Branching {
         } else if (dayOfWeek == 4) {
             System.out.println("Pizza Thursdays");
         } else if (dayOfWeek == 5) {
-            System.out.println("Beef Sandwiches with Fries Fridays");
+            System.out.println("Beef Burgers with Fries Fridays");
         } else {
-            System.out.println("Beef Sandwiches without Fries");
+            System.out.println("Chicken Curry and Rice *or* Chicken Wraps without Couscous");
         }
     }
 }

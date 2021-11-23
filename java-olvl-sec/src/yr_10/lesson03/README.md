@@ -144,6 +144,7 @@ if (!isWarm) {
 }
 ```
 !("https://giphy.com/embed/3o6nUWcomi37MoVOpO")
+
 ## Key Takeaways
 
 - A program that can make choices can behave slightly differently each time it is run depending on the input.

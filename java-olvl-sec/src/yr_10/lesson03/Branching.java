@@ -117,5 +117,21 @@ public class Branching {
     public static void learnTheAlphabet() {
         char letter = 'T';
         // TODO your switch case here
+        switch(letter) {
+            case 'A' : {
+                System.out.println("A or a for apple.");
+                break;
+            }
+            case 'B' : {
+                System.out.println("B or b for buffalo.");
+                break;
+            }
+            case 'C' : {
+                System.out.println("C or c for cat");
+            }
+            default : {
+                System.out.println("It is not a letter of the alphabet, no word!");
+            }
+        }
     }
 }

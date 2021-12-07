@@ -20,8 +20,15 @@ public class MoreLoops {
         int guess = sc.nextInt();
         // Using while, keep asking for a guess until guess == number
         while (guess != number) {
+            if (guess < number) {
+                System.out.println("You are not correct! The number I am thinking of, is bigger. Take another guess...");
+            } else {
+                System.out.println("You are not correct! The number I am thinking of, is smaller. Take another guess...");
+            }
             // TODO Make the user take another guess
+            guess = sc.nextInt();
         }
+        System.out.println("Congratulations, you guessed the number!");
 
         // Exercise 2 - Guess the number second round, but the user only has three tries!
         // TODO Explain that you are playing guess the number, but tell the user they only have 3 tries

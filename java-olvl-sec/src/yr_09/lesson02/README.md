@@ -54,3 +54,38 @@ int cpuUsage;
 
 float temperature;
 ```
+
+# 1.5 Assigning Values to Variables
+
+We can assign a value to a variable that was declared in our program. Setting values is really easy. All you need to do is type the variable name, equals and type the value. Remember the value should be of the appropriate type.
+
+`score = 100;`
+
+This means that you cannot do `score = 100.5` because score is declared as an `int` and not a `double`.
+
+<b>Pro Tip:</b> You can do a declaration and an assignment in one go. So instead of
+
+```
+int score;
+score = 100;
+```
+
+you can do
+
+`int score = 100;`
+
+# 1.6 Creating Constants
+
+There will be occasions where data items in a program would have values that should not change at any point during execution. We can list some examples:
+
+- The maximum score in an exam, which might be 100.
+- The number of hours in a day, which is 24.
+- The mathematical value of pi, which is around 3.14176
+
+The declaration and assignment of a constant works very similarly to a variable, just you need to add the `final` keyword before the *data type*.
+
+```
+final int HOURS_IN_A_DAY = 24;
+```
+
+Note that the name was written in all caps. This is the convention for constants in Java.

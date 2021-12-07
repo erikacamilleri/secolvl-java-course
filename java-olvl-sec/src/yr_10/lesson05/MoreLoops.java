@@ -32,12 +32,33 @@ public class MoreLoops {
 
         // Exercise 2 - Guess the number second round, but the user only has three tries!
         // TODO Explain that you are playing guess the number, but tell the user they only have 3 tries
+        System.out.println("Let's have another round. But this time, I will only give you three chances!");
         // TODO Copy the piece of code that gets a random number (you can pause afterward to make it seem like the computer is thinking...)
-        // TODO Declare a variable to count the tries
+        // This piece of codes gives a random number
+        int number2 = (new Random()).nextInt(10);
+        // Make the program take a break
+        pause(5);
+        int tries = 1;
         // TODO Ask user for first guess
+        System.out.println("Take your first guess...");
+        guess = sc.nextInt();
         // TODO While the user did not guess **and** tries is less than 3, keep asking for a guess
-        // TODO Keep track of whether the user guessed or not, and state the number the computer came up with
-
+        while(guess != number2 && tries <= 3) {
+            if (guess < number) {
+                System.out.println("You are not correct! The number I am thinking of, is bigger. Take another guess...");
+            } else {
+                System.out.println("You are not correct! The number I am thinking of, is smaller. Take another guess...");
+            }
+            // TODO Make the user take another guess
+            guess = sc.nextInt();
+            tries = tries + 1;
+        }
+        if (tries == 3 && guess == number) {
+            System.out.println("You guessed! Well done!");
+        }
+        if (tries == 3 && guess != number) {
+            System.out.println("You lost! The number I thought of was... " + number2);
+        }
         // We are good developers, that take care of resources <3
         sc.close();
     }

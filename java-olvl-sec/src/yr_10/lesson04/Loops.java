@@ -3,7 +3,6 @@ package yr_10.lesson04;
 import java.util.Scanner;
 
 public class Loops {
-
     /**
      * Today, we are going to learn about for loops!
      */
@@ -26,15 +25,24 @@ public class Loops {
             int timesRow = 3 * i;
             System.out.println(i + " x 3 = " + timesRow);
         }
-
     }
 
     /**
-     * Replace this comment with the description of the challenge that you chose!
+     * Make the user input 3 numbers and output the highest number.
      */
     public static void challenge() {
-
+        int highestNumber = -1; // you can assign any value here, won't make a difference
         // Do not forget to import java.util.Scanner; at the very top!
         Scanner sc = new Scanner(System.in);
+        for(int i= 1; i <=3; i++) {
+            System.out.println("Throw me a number...");
+            int numberIn = sc.nextInt();
+            // Smart Trick: if it is the first number then update highest number
+            if (i == 1 || numberIn > highestNumber) {
+                highestNumber = numberIn;
+            }
+        } 
+        sc.close();
+        System.out.println("The highest number is " + highestNumber);
     }
 }

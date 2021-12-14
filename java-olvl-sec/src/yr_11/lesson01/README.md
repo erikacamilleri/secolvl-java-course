@@ -14,14 +14,19 @@ As a customer, when I load the app, I would like to see a menu of food items, so
 | ------------------------ |
 | Display numbered list    | 
 
-As a customer, when I pick a food item, I would like to see the food item added to a cart, so that the total changes.
+As a customer, when I pick a food item, I would like to see the running total of my cart, so that I am careful not to go over budget.
 
-| Acceptance Criteria                   |
-| ------------------------------------- |
-| Accept a unique code for food item    |
+| Acceptance Criteria                                  |
+| ---------------------------------------------------- |
+| Accept a unique code for food item                   |
 | Display cart total (number of items) e.g. $15.00 (1) | 
 
-As a customer, when there are food items in my cart, I would like to be able to review it, so that I can either add more items or proceed to payment.
+As a customer, when I finish my order, I would like to see a breakdown of my order, so that I can display it to the server when I collect my order.
+
+| Acceptance Criteria                                          |
+| -------------------------------------------------------------|
+| Break down of order with total at the end                    |
+| Unique Code for order                                        |   
 
 # Technical Documentation
 
@@ -32,3 +37,19 @@ Due to Covid-19 mitigation measures you are not expected to create objects in Ja
 A good alternative to store *records* like of a person, or of a menu. These are multiple arrays of the same size such that i-th element of each array is closely related! All i-th elements together represent an object or entity. In FoodExpress three arrays represent a single food item record consisting of the food code, name of the item and the price.
 
 Read more [here](https://www.geeksforgeeks.org/parallel-array/).
+
+# Coursework Technical Check List
+
+o input and output statements
+o assignment expressions
+o sequential execution
+o conditional execution and branching
+o looping construct
+
+# Special Features (Description Required)
+
+o Validation
+o Verification
+o Array Algorithm
+o Meaningful Identifiers, Readable Code
+o Advanced Constructs e.g. Parallel Arrays or Objects (eventual use... )

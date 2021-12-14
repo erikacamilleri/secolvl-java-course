@@ -80,4 +80,28 @@ public class ArrayHelpers {
         }
         return !(flag);
     }
+
+    public static int getLast(int[] elements) {
+        if (elements.length > 0) {
+            return elements[elements.length - 1];
+        }
+        return -1;
+    }
+
+    public int getFirst(int[] elements) {
+        if(elements.length > 0) {
+            return elements[0];
+        }
+        return -1;
+    }
+
+    public int summation(int[] elements) {
+        int sum = 0;
+        if (elements.length > 0) {
+            for(int i = 0; i < elements.length; i++) {
+                sum = sum + elements[i];
+            }
+        }
+        return sum;
+    }
 }

@@ -1,5 +1,7 @@
 # Christmas Coding Challenge
 
+
+
 ## Santa Parcel Delivery
 
 Santa needs a program to check the size and weight of parcels to determine which can be accepted to deliver on Christmas Eve. 
@@ -12,7 +14,7 @@ But we are in luck, we can do this challenge to help Santa together.
 
 Input and store the weight and dimensions for one parcel. All the dimensions (l, b, h) and the weight must be validated on entry and an unsuitable parcel is rejected.
 
-- Dimension cannot be more than 100cm
+- Dimension (l + b + h) cannot be more than 100cm
 - The sum of all dimensions must not be greater than 300cm.
 - The weight must be between 1kg and 10kg (inclusive).
 

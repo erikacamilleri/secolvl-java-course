@@ -22,7 +22,7 @@ public class SantaParcelDelivery {
 
         double dimensions = l + b + h;
 
-        if (dimensions > 300 || w < 1 || w > 100 || l > 100 || b > 100 || h > 100) {
+        if (dimensions > 300 || w < 1 || w > 10 || l > 100 || b > 100 || h > 100) {
             System.out.println("Sorry, the parcel is invalid!");
         } else {
             System.out.println("We can deliver this parcel!");

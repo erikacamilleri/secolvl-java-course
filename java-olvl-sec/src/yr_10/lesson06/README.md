@@ -1,6 +1,6 @@
 # Christmas Coding Challenge
 
-
+![Alt Text](https://media.giphy.com/media/l0MYN7mdvcZBBpEly/giphy.gif)
 
 ## Santa Parcel Delivery
 
@@ -8,7 +8,7 @@ Santa needs a program to check the size and weight of parcels to determine which
 
 There are three tasks to complete, one is easy, the other is a little harder, and the last one is most difficult! Only experienced programmers can help with the last one!
 
-But we are in luck, we can do this challenge to help Santa together.
+But we are in luck, we can do this challenge to help Santa **together**.
 
 ### Task 1 - Check the size and weight of each parcel (EASY)
 
@@ -35,3 +35,35 @@ Calculate the number of candy canes required to deliver each parcel. Use the fol
 ## There is a catch...
 
 One task builds on the other... so we have to work together if we want to help Santa. Are you up for the challenge?
+
+# Teams
+
+For this exercise we will be working in teams, and each member would have a particular role:
+
+| Name        | Role        |
+| ----------- | ------------|
+| Paul B      | Lead        |
+| Haiyou Z    | Developer   |
+| Andre Z     | Researcher  |
+
+| Name        | Role        |
+| ----------- | ------------|
+| Jay Li Z    | Lead        |
+| Richard W   | Developer   |
+| Tiziano L   | Researcher  |
+
+| Name        | Role        |
+| ----------- | ------------|
+| Dennis N    | Lead        |
+| Vincent Z   | Developer   |
+| Tiange W    | Researcher  |
+| Yichang M   | Researcher  |
+
+# What is my level?
+
+Easy - You are getting comfortable with the basics. There is input, output, and simple processing that involves branching. You are on the right track.
+
+Medium - You remembered loops. Which loop did you use? You also know how to keep track of a running total. Great work!
+
+Hard - You have stamina! You also know how to do quite complex expressions in Java. You are defintely ready for the next phase of our journey.
+

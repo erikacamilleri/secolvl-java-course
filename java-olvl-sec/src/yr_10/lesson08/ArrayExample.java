@@ -12,17 +12,29 @@ public class ArrayExample {
 
         // Inserting the first element
         runningTimes[0] = 4.0; // 4 seconds
+        runningTimes[1] = 5.6; // 5.6 seconds
+        runningTimes[2] = 0.2; // 0.2 seconds
+        runningTimes[3] = 1.27; // 1.27 seconds
+        runningTimes[4] = 4.5; // 4.5 seconds
+        runningTimes[5] = 0.2; // 0.2 seconds
+        runningTimes[6] = 0.2; // 0.2 seconds
+        runningTimes[7] = 0.2; // 0.2 seconds
+        runningTimes[8] = 0.2; // 0.2 seconds
+        runningTimes[9] = 0.2; // 0.2 seconds
 
-        // TODO insert nine other double elements in the array
-
-        for(int i = 0; /** TODO Fill in the blanks here */) {
-            // TODO total = total + the current runningTime element
+        for(int i = 0; i < 10; i++) {
+            // total = total + the current runningTime element
+            total = total + runningTimes[i];
         }
 
         System.out.println("Total: " + total);
 
-        // TODO declare a double variable and call it average
+        // declare a double variable and call it average
+        double average;
 
-        // TODO calculate the average
+        // calculate the average
+        average = total / 10.00;
+
+        System.out.println("Average: " + average);
     }
 }

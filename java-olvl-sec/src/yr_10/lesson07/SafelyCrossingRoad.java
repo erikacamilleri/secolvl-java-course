@@ -6,7 +6,9 @@ import java.util.Scanner;
  * Question 4 
  */
 public class SafelyCrossingRoad {
-    public static void main(String[] args) {
+    
+    public static void lesson() {
+        
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Do something to stop at the kerb");

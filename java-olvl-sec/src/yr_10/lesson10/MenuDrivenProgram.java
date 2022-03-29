@@ -19,7 +19,7 @@ public class MenuDrivenProgram {
         System.out.println("1. Area of Right Angle Triangle");
         System.out.println("2: Area of Square");
         System.out.println("3: Area of Rectangle");
-        // TODO: Try and add a fourth option for area. Get area ideas from the internet.
+        System.out.println("4: Area of Cylinder");
         System.out.println("5: Area of Circle");
         System.out.println("7: Quit");
         
@@ -38,7 +38,7 @@ public class MenuDrivenProgram {
                 System.out.print("Enter breadth:");
                 double breadth = sc.nextDouble();
                 // Make the correct method call
-                double area = calcAreaRightAngleTriange(height, breadth);
+                double area = calcAreaRightAngleTriangle(height, breadth);
                 // Display the result to the user
                 System.out.print("The area of your right angle triange is: " + area);
                 break;
@@ -55,10 +55,26 @@ public class MenuDrivenProgram {
                 break;
             }
             case 3: {
-                // TODO: User flow for area of rectangle option
+                // Guide the user to take appropriate steps
+                System.out.println("Your choice is Area of Rectangle: ");
+                System.out.print("Enter width: ");
+                double width = sc.nextDouble();
+                System.out.print("Enter breadth: ");
+                double breadth = sc.nextDouble();
+                // Make the correct method call
+                double area = calcAreaRectangle(width, breadth);
+                System.out.print("The area of your rectangle is: " + area);
             }
             case 4: {
-                // TODO: User flow for area of your choice
+                // Guide the user to take appropriate steps
+                System.out.println("Your choice is Area of Cylinder: ");
+                System.out.print("Enter radius: ");
+                double radius = sc.nextDouble();
+                System.out.print("Enter hieght: ");
+                double height = sc.nextDouble();
+                // Make the correct method call
+                double area = calcAreaRectangle(radius, height);
+                System.out.print("The area of your rectangle is: " + area);
             }
             case 5: {
                 // Guide the user to take appropriate steps
@@ -91,7 +107,7 @@ public class MenuDrivenProgram {
      * 
      * @return area of right angle triangle
      */
-    public static double calcAreaRightAngleTriange(double h, double b) {
+    public static double calcAreaRightAngleTriangle(double h, double b) {
         double area = 0.0;
         area = (h*b)/2;
         return area;
@@ -127,5 +143,14 @@ public class MenuDrivenProgram {
         return area;
     }
 
-    // TODO: Don't forget to create a method for your own option here!!
+    /**
+     * 
+     * @param r
+     * @param h
+     * @return area of cylinder
+     */
+    public static double calcAreaCylinder(double r, double h) {
+        double area = (Math.PI*r*r) + (2 * Math.PI * r * h);
+        return area;
+    }
 }

@@ -4,7 +4,7 @@ In this practical lesson we will create another menu-driven program. However thi
 
 Here is some sample output:
 
-<img src=""/>
+<img src="https://github.com/erikacamilleri/secolvl-java-course/blob/main/java-olvl-sec/src/yr_10/lesson11/doc/img/sample_output.PNG?raw=true"/>
 
 ## Remember these skills from last week
 

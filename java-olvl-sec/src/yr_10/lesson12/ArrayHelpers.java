@@ -106,7 +106,7 @@ public class ArrayHelpers {
         return -1;
     }
 
-    public int getFirst(int[] elements) {
+    public static int getFirst(int[] elements) {
         if(elements.length > 0) {
             return elements[0];
         }
@@ -117,7 +117,7 @@ public class ArrayHelpers {
      * ----- SUM -----------------------------------------------------------------------
      * @coded_by Luke Bianco Year 11 2022
      */
-    public int sum(int[] elements) {
+    public static int sum(int[] elements) {
         int sum = 0;
         if (elements.length > 0) {
             for(int i = 0; i < elements.length; i++) {

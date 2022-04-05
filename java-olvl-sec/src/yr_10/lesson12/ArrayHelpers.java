@@ -1,9 +1,11 @@
 package yr_10.lesson12;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class ArrayHelpers {
-
     /*
      * ----- FIND INDEX --------------------------------------------------------------------
      * Uses a linear search to find an element in the array. Gives back position.
@@ -41,6 +43,22 @@ public class ArrayHelpers {
             }
             current = current + 1;
         }                  
+        return targetPosition;
+    }
+
+    public static double findIndex(double[] elements, double target) {
+        boolean isFound = false;
+        int targetPosition = -1;
+        int size = elements.length;
+        int current = 0;
+        while(current < size && isFound == false) {
+            double compare = elements[current];
+            if (compare == target) {
+                isFound = true;
+                targetPosition = current;
+            }
+            current = current + 1;
+        }
         return targetPosition;
     }
 
@@ -96,10 +114,29 @@ public class ArrayHelpers {
         return !(flag);
     }
 
+    // @coded_by Gabriel Scerri Year 10 2022
+    public static boolean isAllSameValues(String[] elements, String value) {
+        boolean flag = false;
+        for(int i=0; i < elements.length; i++) {
+            if(!value.equals(elements[i])) {
+                // found a different element!
+                flag = true;
+            }
+        }
+        return !(flag);
+    }
+
     /*
      * ----- GET LAST AND GET FIRST -----------------------------------------------------------------------
      */
     public static int getLast(int[] elements) {
+        if (elements.length > 0) {
+            return elements[elements.length - 1];
+        }
+        return -1;
+    }
+
+    public static double getLast(double[] elements) {
         if (elements.length > 0) {
             return elements[elements.length - 1];
         }
@@ -125,5 +162,50 @@ public class ArrayHelpers {
             }
         }
         return sum;
+    }
+
+    public static double sum(double[] elements) {
+        double sum = 0;
+        if (elements.length > 0) {
+            for(int i = 0; i < elements.length; i++) {
+                sum = sum + elements[i];
+            }
+        }
+        return sum;
+    }
+
+    /*
+     * ----- MIN -----------------------------------------------------------------------
+     * @coded_by Ryder Croft Year 10 2022
+     */
+    public static int min(int[] elements) {
+        int min = elements[0];
+        for(int i = 1; i < elements.length; i++) {
+            if (elements[i] < min) {
+                min = elements[i];
+            }
+        }
+        return min;
+    }
+
+    // @coded_by Ryder Croft Year 10 2022
+    public static int max(int[] elements) {
+        int max = 0;
+        for(int i = 1; i < elements.length; i++) {
+            if (elements[i] > max) {
+                max = elements[i];
+            }
+        }
+        return max;
+    }
+
+    /*
+     * ----- SORT -----------------------------------------------------------------------
+     * @coded_by Paul Bezzina Year 10 2022
+     */
+    public Integer[] sort(Integer[] elements) {
+        List<Integer> temp = Arrays.asList(elements);
+        Collections.sort(temp);
+        return (Integer[]) (temp.toArray());
     }
 }

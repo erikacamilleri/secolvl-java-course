@@ -1,6 +1,6 @@
 package yr_10.lesson12;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -201,11 +201,24 @@ public class ArrayHelpers {
 
     /*
      * ----- SORT -----------------------------------------------------------------------
-     * @coded_by Paul Bezzina Year 10 2022
+     * @coded_by Paul Bezzina and Ms Camilleri Year 10 2022
      */
-    public Integer[] sort(Integer[] elements) {
-        List<Integer> temp = Arrays.asList(elements);
+    public static int[] sort(int[] elements) {
+        
+        List<Integer> temp = new ArrayList<Integer>();
+        
+        for(int element : elements) {
+            temp.add(element);
+        }
+        
         Collections.sort(temp);
-        return (Integer[]) (temp.toArray());
+        
+        for(int i = 0; i < elements.length; i++) {
+            elements[i] = temp.get(i).intValue();
+        }
+        
+        return elements;
     }
+
+    // TODO: @Paul Bezzina provide sort methods like the above for double and String including tests
 }

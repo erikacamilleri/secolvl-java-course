@@ -33,4 +33,36 @@ If you are up for the challenge, here are a few ideas. When you manage, let your
 
 # Testing our code
 
-Coming soon.
+Not many students realise this, but you should know that a big part of creating solutions is actually testing them. This should make sense, otherwise how will we know that our creations are actually of use?In fact, testing is a big part of the job. So programmers also write even more code to just test their solutions. We call them *automated tests*.
+
+## Unit Test
+
+The simplest form of testing is Unit Testing. A unit test is a small piece of code that checks whether another piece of code works well with a specific data set. The idea is that if you test the smallest most useful bits of your code in isolation, and they all work as designed, then your software application *should* work. In this lesson we will be writing unit tests for methods in the `ArrayHelpers`. 
+
+Here is an example of a unit test:
+
+```
+/**
+* A unit test for ArrayHelpers.getFirst()
+*/
+public static void testGetFirst() {
+    // 1. come up with good test data
+    int[] testData = {2, 5, 8, 2};
+    // 2. create a variable that will store the expected result of the code you are testing
+    int expectedOutcome = 2;
+    // 3. actually call the test subject and store its value
+    int actualOutcome = ArrayHelpers.getFirst(testData);
+    // 4. test that the expected result is what you actually get
+    if (expectedOutcome == actualOutcome) {
+        System.out.print("Pass ");
+    } else {
+        System.out.print("Fail ");
+    }   
+}
+```
+
+The basic properties of any unit test:
+1. Test data.
+2. Expected outcome.
+3. Math the specific method call that gives an actual result with the test data.
+4. Check that the expected outcome and actual result are equal. When equal the test passes, otherwise its a fail (so something is perhaps not working as it should).

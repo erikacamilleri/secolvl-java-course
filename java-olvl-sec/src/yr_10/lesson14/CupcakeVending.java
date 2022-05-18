@@ -21,8 +21,41 @@ public class CupcakeVending {
         System.out.println("Enter quantity");
         int quantityIn = sc.nextInt();
 
-        // Display the price
-        System.out.println("Price: " + (PRICE * quantityIn));
-    }
+        // Display the price, if quantityIn is 3, get one for free
+        double totalPrice = 0;
+        totalPrice = PRICE * quantityIn;
+        if (quantityIn == 3) {
+            // apply discount
+            totalPrice = totalPrice - PRICE;
+        }
+        System.out.println("Price: " + totalPrice);
 
+        // The part where the user puts in money
+        double moneyIn = 0;
+        double total = 0;
+        do {
+            System.out.println("Keep paying...");
+            moneyIn = sc.nextDouble();
+            total = total + moneyIn;
+        } while (total >= totalPrice);
+
+        // If the customer over paid for the cupcakes give change
+        if (moneyIn > totalPrice) {
+            double change = moneyIn - totalPrice;
+            System.out.println("Here is your change: " + change);
+        }
+
+        // Drop the cupcake(s)
+        switch (flavourIn) {
+            case FLAVOUR_VANILLA: {
+                break;
+            }
+            // TODO: Other Cases
+        }
+
+        // TODO Print Receipt
+
+        // We are good developers, we give resources back!
+        sc.close();
+    }
 }

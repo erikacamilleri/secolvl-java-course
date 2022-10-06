@@ -8,7 +8,7 @@ import java.util.Random;
 public class ArrayHelpers {
     /*
      * ----- FIND INDEX --------------------------------------------------------------------
-     * Uses a linear search to find an element in the array. Gives back position.
+     * Uses a   to find an element in the array. Gives back position.
      * @coded_by Daniel Cassar Year 11 2022
      */
     public static int findIndex(int[] elements, int target) {

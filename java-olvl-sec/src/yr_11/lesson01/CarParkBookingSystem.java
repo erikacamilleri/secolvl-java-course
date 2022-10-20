@@ -7,11 +7,12 @@ public class CarParkBookingSystem {
     // Declaration of class variables (global scope)
     public static String[] bookingTable = new String[20];
 
-    // TODO: Declare int generalBookingsCount
+    public static int generalBookingsCount;
 
-    // TODO: Declare int accessibleBookingsCount
+    public static int accessibleBookingsCount;
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("*** Car Park Booking System ***");
@@ -19,21 +20,27 @@ public class CarParkBookingSystem {
         boolean halt = false;
         
         do {
-            // TODO: Ask the user whether they need to book a slot
-
-            // TODO: Ask the user to choose whether it should be general or accessible
-
-            // TODO: Based on the input, call the right method to search for a slot
-
-            // TODO: When a slot is available ask for booking reference and store in booking table and update count
-
-            // TODO: Display the booking confirmation or an error message
-
-            System.out.println("Would you like to continue making bookings? (yes/no)");
+            // Ask the user whether they need to book a slot
+            System.out.println("Do you need to book a slot? (yes/no)");
             String reply = sc.nextLine();
+            
             if (reply.equals("no")) {
                 halt = true;
             }
+
+            if (reply.equals("yes")) {
+                // Ask the user to choose whether it should be general or accessible
+                System.out.println("Do you need an accessible space? (yes/no)");
+                reply = sc.nextLine();
+
+                // TODO: Based on the input, call the right method to search for a slot
+
+                // TODO: When a slot is available ask for booking reference and store in booking table and update count
+
+                // TODO: Display the booking confirmation or an error message
+                
+                
+            } 
         } while(!halt);
 
         // TODO: Display generalBookingsCount

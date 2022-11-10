@@ -63,5 +63,15 @@ public class CarParkBookingSystem {
         return nextAvailable; // -1 means there is no available space
     }
 
-    // TODO: Method nextAvailableGeneralSpace()
+    // Method nextAvailableGeneralSpace()
+    public static int nextAvailableGeneralSpace() {
+        int nextAvailable = -1;
+        for (int i = 19; i > 5; i--) {
+            if (bookingTable[i] == null) {
+                nextAvailable = i;
+                break;
+            }
+        }
+        return nextAvailable; // -1 means there is no available space
+    }
 }

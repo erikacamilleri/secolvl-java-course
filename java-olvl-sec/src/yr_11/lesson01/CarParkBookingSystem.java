@@ -33,11 +33,35 @@ public class CarParkBookingSystem {
                 System.out.println("Do you need an accessible space? (yes/no)");
                 reply = sc.nextLine();
 
-                // TODO: Based on the input, call the right method to search for a slot
+                // Based on the input, call the right method to search for a slot
+                int slot;
+                boolean accessible;
+                if (reply.equals("yes")) {
+                    slot = nextAvailableAccessibleSpace();
+                    accessible = true;
+                } else {
+                    slot = nextAvailableGeneralSpace();
+                    accessible = false;
+                }
 
-                // TODO: When a slot is available ask for booking reference and store in booking table and update count
-
-                // TODO: Display the booking confirmation or an error message  
+                // When a slot is available ask for booking reference and store in booking table and update count
+                if (slot != -1) {
+                    String bookingReference = "";
+                    if (accessible) {
+                        bookingReference += "Accessible, ";
+                        accessibleBookingsCount = accessibleBookingsCount + 1;
+                    } else {
+                        bookingReference += "General, ";
+                        generalBookingsCount = generalBookingsCount + 1;
+                    }
+                    System.out.println("Please enter your booking e.g. Erika Camilleri, MIR565");
+                    String userDetails = sc.nextLine();
+                    bookingReference += userDetails;
+                    bookingTable[slot] = bookingReference;
+                    System.out.println("You booked slot " + (slot + 1));
+                } else {
+                    System.out.println("The carpark is full, very sorry!");
+                } 
             } 
         } while(!halt);
 

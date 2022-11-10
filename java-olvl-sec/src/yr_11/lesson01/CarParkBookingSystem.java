@@ -12,7 +12,7 @@ public class CarParkBookingSystem {
     public static int accessibleBookingsCount;
 
     public static void main(String[] args) {
-
+        
         Scanner sc = new Scanner(System.in);
 
         System.out.println("*** Car Park Booking System ***");
@@ -23,7 +23,7 @@ public class CarParkBookingSystem {
             // Ask the user whether they need to book a slot
             System.out.println("Do you need to book a slot? (yes/no)");
             String reply = sc.nextLine();
-            
+
             if (reply.equals("no")) {
                 halt = true;
             }
@@ -37,9 +37,7 @@ public class CarParkBookingSystem {
 
                 // TODO: When a slot is available ask for booking reference and store in booking table and update count
 
-                // TODO: Display the booking confirmation or an error message
-                
-                
+                // TODO: Display the booking confirmation or an error message  
             } 
         } while(!halt);
 
